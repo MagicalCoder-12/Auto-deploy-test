@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -10,11 +11,20 @@ def home():
 def about():
     return render_template('about.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Serve favicon
+@app.route('/favicon.ico')
+def favicon_ico():
+    return send_from_directory(os.path.join(app.root_path, 'templates'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+@app.route('/favicon.png')
+def favicon_png():
+    return send_from_directory(os.path.join(app.root_path, 'templates'), 'favicon.png', mimetype='image/png')
 
 # Vercel entry point for Flask app
-from app import application
+from app import app
 
-# This is the entry point for Vercel
-# The Flask app is imported as 'application' from app.py
+# Expose the Flask app as 'application' for Vercel
+application = app
+
+if __name__ == '__main__':
+    app.run(debug=True)
