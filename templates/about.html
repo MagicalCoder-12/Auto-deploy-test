@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Flask App Deployment Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #343a40;
+        }
+        .nav {
+            background-color: #343a40;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+        
+        <h1>About This Flask App</h1>
+        
+        <h2>Auto Deploy Agent</h2>
+        <p>The Auto Deploy Agent is a command-line tool that automatically detects, builds, and deploys web projects using AI-powered recommendations.</p>
+        
+        <h2>Supported Platforms</h2>
+        <ul>
+            <li><strong>Vercel</strong> - Excellent for Next.js, Vite, and static sites</li>
+            <li><strong>Netlify</strong> - Great for React and static sites</li>
+            <li><strong>GitHub Pages</strong> - Perfect for simple static sites</li>
+            <li><strong>Cloudflare Pages</strong> - Fast global CDN for static sites</li>
+            <li><strong>Render</strong> - Ideal for Python web applications</li>
+        </ul>
+        
+        <h2>How It Works</h2>
+        <ol>
+            <li>Detect project type using AI (Llama 3.1)</li>
+            <li>Recommend best deployment platform</li>
+            <li>Install required dependencies</li>
+            <li>Create necessary configuration files</li>
+            <li>Deploy with a single command</li>
+        </ol>
+    </div>
+</body>
+</html>
