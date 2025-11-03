@@ -10,8 +10,11 @@ def home():
 def about():
     return render_template('about.html')
 
-# Expose the Flask app as 'application' for Vercel
-application = app
-
 if __name__ == '__main__':
     app.run(debug=True)
+
+# Vercel entry point for Flask app
+from app import application
+
+# This is the entry point for Vercel
+# The Flask app is imported as 'application' from app.py
